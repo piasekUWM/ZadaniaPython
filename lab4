@@ -1,0 +1,114 @@
+# # Zad 1.
+# lista = [x * 2 for x in range(0, 31)]
+# plik = open('dane.txt', 'w+')
+# plik.writelines(str(lista))
+# plik.close()
+#
+# # Zad 2.
+# plik = open('dane.txt', 'r')
+# print(plik.readlines())
+# plik.close()
+#
+# # Zad 3.
+# with open('dane.txt', 'a+') as plik:
+#     for x in range(0, 5):
+#         plik.writelines('nowa linia nr: ' + str(x))
+# plik = open('dane.txt', 'r')
+# print(plik.readlines())
+# plik.close()
+#
+# # Zad 4.
+#
+#
+# class NaZakupy:
+#     def __init__(self, nazwa, ilosc, jednostka, cena_jed):
+#         self.nazwa = nazwa
+#         self.ilosc = ilosc
+#         self.jednostka = jednostka
+#         self.cena_jed = cena_jed
+#
+#     def wyswietl_produkt(self):
+#         print(self.nazwa + ' ' + self.ilosc + ' ' + self.jednostka + ' ' + self.cena_jed)
+#
+#     def ile_produktu(self):
+#         print(self.ilosc + ' ' + self.jednostka)
+#
+#     def ile_kosztuje(self):
+#         print((self.ilosc * self.cena_jed))
+#
+# # Zad 5.
+#
+#
+# class Ciag:
+#     def __init__(self, a1, r, n):
+#         self.a1 = a1
+#         self.r = r
+#         self.n = n
+#         self.ciag = [a1 + r * x for x in range(0, n)]
+#
+#     def pobierz_elementy(self, wartosc):
+#         if wartosc > self.n - 1 or wartosc < 0:
+#             print('niepoprawna wartosc')
+#             return -1
+#         return self.ciag[wartosc]
+#
+#     def pobierz_parametry(self, a1, r, n):
+#         self.a1 = a1
+#         self.r = r
+#         self.n = n
+#         self.ciag = [a1 + r * x for x in range(0, n)]
+#
+#     def policz_sume(self):
+#         suma = 0
+#         for x in range(0, self.n):
+#             suma += self.ciag[x]
+#         return suma
+#
+#     def policz_elementy(self):
+#         return self.n
+#
+#
+# mojciag = Ciag(0, 5, 11)
+# print(mojciag.ciag)
+# print(mojciag.pobierz_elementy(7))
+# mojciag.pobierz_parametry(0, 1, 11)
+# print(mojciag.ciag)
+# print(mojciag.policz_sume())
+# print(mojciag.policz_elementy())
+#
+#
+# # Zad 6.
+
+
+class Robaczek:
+    def __init__(self, x, y, krok):
+        self.x = x
+        self.y = y
+        self.krok = krok
+
+    def idz_w_gore(self, ile):
+        self.y += ile * self.krok
+
+    def idz_w_prawo(self, ile):
+        self.x += ile * self.krok
+
+    def idz_w_dol(self, ile):
+        self.y -= ile * self.krok
+
+    def idz_w_lewo(self, ile):
+        self.x -= ile * self.krok
+
+    def pokaz_gdzie_jestes(self):
+        print('x: ' + str(self.x) + ', y: ' + str(self.y))
+
+
+robal = Robaczek(0, 0, 1)
+robal.pokaz_gdzie_jestes()
+robal.idz_w_gore(79)
+robal.pokaz_gdzie_jestes()
+robal.idz_w_prawo(33)
+robal.pokaz_gdzie_jestes()
+robal.idz_w_dol(62)
+robal.pokaz_gdzie_jestes()
+robal.idz_w_lewo(11)
+robal.pokaz_gdzie_jestes()
