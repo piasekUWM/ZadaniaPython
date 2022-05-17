@@ -1,85 +1,85 @@
-# Zad 1.
+import numpy as np
 
-# lista = ['żużel', 'skoki narciarskie', 'koszykówka']
-# lista.reverse()
-# print(lista)
-# lista.append('siatkowka')
-# lista.append('unihokej')
-# print(lista)
+#   # Zad_1
+# a = 4 * (np.arange(1, 21))
+# print(a)
 
 
-# Zad 2.
 
-# slownik = {'zw':'zaraz wracam',"imo":'in my opinion', 'tbh':'to be honest' }
-# print(slownik['zw'])
-# print(slownik['imo'])
-# print(slownik['tbh'])
-
-
-# Zad 3.
-
-# slownik = {'LOL':'league of legends',"GTA":'grand theft auto', 'CS-GO':'counter strike global offensive' }
-# print(len(dict.keys(slownik)))
+#   # Zad_2
+# a = np.arange(11, dtype='float')
+# b = a.astype('int32')
+# print(a)
+# print(b)
 
 
-# Zad 4.
 
-# napis = input("Podaj napis : ")
-# print(napis.count('a'))
-
-
-# Zad 5.
-
-# import sys as system
-
-# system.stdout.write("Podaj trzy liczby całkowite : ")
-# a = system.stdin.readline()
-# a = int(a)
-# b = system.stdin.readline()
-# b = int(b)
-# c = system.stdin.readline()
-# c = int(c)
-# dzialanie = a*b + c
-# dzialanie = str(dzialanie)
-# system.stdout.write(dzialanie)
+#   # Zad_3
+# def zad3(n):
+#     a = np.arange(1, n*n+1)
+#     a = a.reshape(n, n)
+#     return(2**a)
+# n = 2
+# print(zad3(int(n)))
 
 
-# Zad 6.
 
-# print('Podaj 3 liczby całkowite : ')
-# a = input()
-# b = input()
-# c = input()
-# a = int(a)
-# b = int(b)
-# c = int(c)
-# print(max(a, b, c))
+#   # Zad_4
+# def zad4(n, i):
+#     return np.logspace(1, i, num=i, endpoint=True, base=n)
+# print(zad4(int(input("podaj n: ")), int(input("podaj i: "))))
 
 
-# Zad 7.
 
-# lista = [ 6, 8, 3, 12, 89.1, 5.17, -6.5]
-# for x in lista:
-#     print(x*x)
-
-
-# Zad 8.
-
-# a = 0
-# lista = []
-# while(a < 10):
-#     b = int(input("Podaj liczbe całkowitą : "))
-#     if(b%2==0):
-#         lista.append(b)
-#     a+=1
-# print(lista)
+#   # Zad_5
+# def zad5(n):
+#     a = np.arange(n, 0, -1)
+#     print(a)
+#     b = np.diag(a, k=2)
+#     print(b)
+# zad5(int(input("n: ")))
 
 
-# Zad. 9.
 
-# import math
-# a = float(input('Podaj liczbe : '))
-# if(a<0):
-#     print('Podano nieprawidłową wartość')
-# else:
-#     print(math.sqrt(a))
+#   # Zad_7
+# def zad7(n):
+#     a = np.diag(np.linspace(2, 2, num=n, dtype=int))
+#     for i in range(n - 1):
+#         b = np.diag(np.linspace(2 * (i + 2), 2 * (i + 2), num=n, dtype=int), k=i + 1)
+#         b = b[:n, :n]
+#         c = np.diag(np.linspace(2 * (i + 2), 2 * (i + 2), num=n, dtype=int), k=-i - 1)
+#         c = c[:n, :n]
+#         a = a + b + c
+#     return a
+# print(zad7(int(input("n: "))))
+
+
+
+#   # Zad_8
+# def zad8(n, kierunek):
+#     if n % 2 == 1:
+#         print("Prosze wpisac parzyste n")
+#     else:
+#         if n < 0:
+#             print("Prosze wpisac dodatnie n")
+#         else:
+#             a = np.arange(1, n * n + 1)
+#             a = a.reshape(n, n)
+#             print(a)
+#             if kierunek == 'poziomo':
+#                 print(a[:(n // 2)])
+#                 print(a[(n // 2):])
+#             if kierunek == 'pionowo':
+#                 print(a[:, :(n // 2)])
+#                 print(a[:, (n // 2):])
+# zad8(int(input("n: ")), input("kierunek: "))
+
+
+
+#   # Zad_9
+# a1 = int(input("a1: "))
+# r = int(input("r: "))
+# n = a1 + 25 * r
+# wynik = np.arange(a1, n, r)
+# wynik = wynik.reshape(5, 5)
+# print(wynik)
