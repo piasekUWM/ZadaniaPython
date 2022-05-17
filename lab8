@@ -1,0 +1,66 @@
+import pandas as pd
+
+
+#   #Zad1.
+# xlsx = pd.ExcelFile('imiona.xlsx')
+# df = pd.read_excel(xlsx)
+
+
+#   #Zad2.
+# a)
+
+# a = df[df['Liczba'] > 1000]
+# print(a)
+
+
+
+# b)
+
+# b = df[df['Imie'] == 'ANDRZEJ']
+# print(b)
+
+
+
+# c)
+
+# suma = df.agg({'Liczba' : 'sum'})
+# print(suma)
+
+
+
+# d)
+
+# suma2 = df[(df['Rok'] >= 2000) & (df['Rok'] <= 2005)].agg({'Liczba' : 'sum'})
+# print(suma2)
+
+
+
+# e)
+
+# M = df[df['Plec'] == 'M'].agg({"Liczba" : 'sum'})
+# K = df[df['Plec'] == 'K'].agg({"Liczba" : 'sum'})
+# print(M)
+# print(K)
+
+
+
+# f)
+
+# a = df.sort_values(by='Rok')
+# b = a.at[0, "Rok"]
+# c = a.at[16416, "Rok"]
+# for x in range(b, c + 1):
+#     z = df.groupby(['Rok']).get_group(x)
+#     maxM = z[z['Plec'] == 'M'].agg({"Liczba": 'max'})
+#     maxK = z[z['Plec'] == 'K'].agg({"Liczba": 'max'})
+#     print(df[(df['Plec'] == 'M') & (df['Liczba'] == maxM[0])])
+#     print(df[(df['Plec'] == 'K') & (df['Liczba'] == maxK[0])])
+
+
+
+# g)
+
+# maxM = df[df['Plec'] == 'M'].agg({"Liczba": 'max'})
+# maxK = df[df['Plec'] == 'K'].agg({"Liczba": 'max'})
+# print(df[(df['Plec'] == 'M') & (df['Liczba'] == maxM[0])])
+# print(df[(df['Plec'] == 'K') & (df['Liczba'] == maxK[0])])
