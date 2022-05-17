@@ -1,85 +1,121 @@
-import numpy as np
+# a = 7
+# b = 9
+# if a>b:
+#     print('liczba a jest większa od liczby b')
+# elif a<b:
+#     print('liczba a jest mniejsza od liczby b')
+# else:
+#     print('liczby są równe')
 
-#   # Zad_1
-# a = 4 * (np.arange(1, 21))
+# if a==b:
+#      print('liczby są równe' % {'zm1':a, 'zm2':b})
+#  elif a<b:
+#      print('liczba a jest mniejsza od liczby b')
+# else:
+#      print('liczby nie są równe' % {'zm1':a, 'zm2':b})
+
+# a=input('podaj liczbę: ')
 # print(a)
-
-
-
-#   # Zad_2
-# a = np.arange(11, dtype='float')
-# b = a.astype('int32')
+# print(type(a))
+# a = int(a)
 # print(a)
-# print(b)
+# print(type(a))
 
+# a=input('podaj pierwszą liczbę: ')
+# b=input('podaj drugą  liczbę: ')
+# c=input('podaj trzecią liczbę: ')
+# d=input('podaj czwartą liczbę: ')
+# a = int(a)
+# b = int(b)
+# c = int(c)
+# d = int(d)
+# if (a>b)&(c>d):
+#     print('a jest wiekszę od b i c jest większę od d')
+# else:
+#     print('a jest mniejsze od b lub c jest mniejsze od d')
 
-
-#   # Zad_3
-# def zad3(n):
-#     a = np.arange(1, n*n+1)
-#     a = a.reshape(n, n)
-#     return(2**a)
-# n = 2
-# print(zad3(int(n)))
-
-
-
-#   # Zad_4
-# def zad4(n, i):
-#     return np.logspace(1, i, num=i, endpoint=True, base=n)
-# print(zad4(int(input("podaj n: ")), int(input("podaj i: "))))
-
-
-
-#   # Zad_5
-# def zad5(n):
-#     a = np.arange(n, 0, -1)
+# for a in range(0,7,1):
 #     print(a)
-#     b = np.diag(a, k=2)
-#     print(b)
-# zad5(int(input("n: ")))
+#
+# lista=['cos', 4,5,6.5]
+# for a in lista:
+#     print(a)
+# else:
+#     print('wyświetlono wszytskie elementy z liczby')
 
+# licznik = 0
+# while licznik!=11:
+#     print(licznik)
+#     licznik +=1
 
-
-#   # Zad_7
-# def zad7(n):
-#     a = np.diag(np.linspace(2, 2, num=n, dtype=int))
-#     for i in range(n - 1):
-#         b = np.diag(np.linspace(2 * (i + 2), 2 * (i + 2), num=n, dtype=int), k=i + 1)
-#         b = b[:n, :n]
-#         c = np.diag(np.linspace(2 * (i + 2), 2 * (i + 2), num=n, dtype=int), k=-i - 1)
-#         c = c[:n, :n]
-#         a = a + b + c
-#     return a
-# print(zad7(int(input("n: "))))
-
-
-
-#   # Zad_8
-# def zad8(n, kierunek):
-#     if n % 2 == 1:
-#         print("Prosze wpisac parzyste n")
+# lista=[4, 8, 5, 3, 2, 9, 7]
+# licznik = 0
+# liczba = input('wpisz liczbe całkowitą: ')
+# while licznik != len(lista):
+#     if int(liczba)- lista[licznik] == 0:
+#         print('liczba ' + str(liczba) + ' - ' + str(lista[licznik]) + ' =0')
+#         break
 #     else:
-#         if n < 0:
-#             print("Prosze wpisac dodatnie n")
-#         else:
-#             a = np.arange(1, n * n + 1)
-#             a = a.reshape(n, n)
-#             print(a)
-#             if kierunek == 'poziomo':
-#                 print(a[:(n // 2)])
-#                 print(a[(n // 2):])
-#             if kierunek == 'pionowo':
-#                 print(a[:, :(n // 2)])
-#                 print(a[:, (n // 2):])
-# zad8(int(input("n: ")), input("kierunek: "))
+#         licznik +=1
+# else:
+#     print('Żadna z wartości nie dała odpowiedniego wyniku')
+#
+# lista1 = [4, 6, 8, 1, 6, 7, 2, 9]
+# lista2 = [4, 7, 3, 5]
+# suma = []
+# for a in lista1:
+#     for b in lista2:
+#         wynik = a + b
+#         suma.append(wynik)
+#     print(suma)
+#
+
+# a = input("podaj pierwszą liczbę: ")
+# b = input("podaj drugą liczbę: ")
+# try:
+#     a = int(a)
+#     b = int(b)
+#     wynik = a / b
+#     print(wynik)
+# except ZeroDivisionError:
+#     print('Nie można dzielić przez 0')
+# except ValueError:
+#     print('Nie wczytano liczby całkowitej')
+
+lista = [1, 4, 6, 8, 0]
+słownik = {1:10, 3:7, 9:20, 'a':'n'}
+print(lista)
+print(słownik)
+
+lista.append(słownik['a'])
+print(lista)
+
+lista.insert(słownik[3], słownik[3])
+print(lista)
+
+słownik[2] = 'g'
+print(słownik)
+
+lista.remove(8)
+print(lista)
+
+lista.pop(1)
+print(lista)
 
 
 
-#   # Zad_9
-# a1 = int(input("a1: "))
-# r = int(input("r: "))
-# n = a1 + 25 * r
-# wynik = np.arange(a1, n, r)
-# wynik = wynik.reshape(5, 5)
-# print(wynik)
+
+
+%%%%%%%%%%%%%%%%%%%%
+# xlsx = pd.ExcelFile('imiona.xlsx')
+# df = pd.read_excel(xlsx, header = 0)
+# grupa = df.groupby('Rok').agg({'Liczba':['sum']})
+# grupa.plot(kind='line', xlabel = 'Rok', ylabel = 'Liczba', rot=0, title='Ilosc urodzonych dzieci w danym roku')
+# plt.legend(['Liczba urodzeń'])
+# plt.show()
+
+# xlsx = pd.ExcelFile('imiona.xlsx')
+# df = pd.read_excel(xlsx, header = 0)
+# grupa = df.groupby('Plec').agg({'Liczba':['sum']})
+# grupa.plot(kind='bar', xlabel = 'Płeć', ylabel = 'Liczba w milionach', rot=0, title = 'Liczba urodzonych chlopcow i dziewczynek z calego zbioru')
+# plt.show()
